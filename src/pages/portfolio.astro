@@ -1,11 +1,10 @@
-<!-- ---
+---
 import { WORK } from '../lib/constants'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TopLayout from '../layouts/TopLayout.astro'
 import BottomLayout from '../layouts/BottomLayout.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 
-import { contentfulClient } from '../lib/contentful'
 // import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import type { EntryFieldTypes } from 'contentful'
 
@@ -19,7 +18,46 @@ interface Project {
   }
 }
 
-const entries = await contentfulClient.getEntries<Project>({})
+const entries = {
+  items: [
+    {
+      sys: {
+        id: '1',
+      },
+      fields: {
+        name: 'Project One',
+        img: {
+          fields: {
+            file: {
+              url: '/path/to/image1.jpg',
+            },
+            title: 'Image 1',
+          },
+        },
+        website: 'https://project-one.com',
+        repositorio: 'https://github.com/user/project-one',
+      },
+    },
+    {
+      sys: {
+        id: '2',
+      },
+      fields: {
+        name: 'Project Two',
+        img: {
+          fields: {
+            file: {
+              url: '/path/to/image2.jpg',
+            },
+            title: 'Image 2',
+          },
+        },
+        website: 'https://project-two.com',
+        repositorio: 'https://github.com/user/project-two',
+      },
+    },
+  ],
+}
 ---
 
 <BaseLayout
@@ -52,4 +90,4 @@ const entries = await contentfulClient.getEntries<Project>({})
       </div>
     </BottomLayout>
   </main>
-</BaseLayout> -->
+</BaseLayout>

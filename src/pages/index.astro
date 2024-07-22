@@ -1,4 +1,6 @@
 ---
+import '../styles/globals.css'
+
 import BaseLayout from '../layouts/BaseLayout.astro'
 import IntroCard from '../components/sections/IntroCard.astro'
 import AboutMe from '../components/sections/AboutMe.astro'
@@ -7,8 +9,7 @@ import TimeZoneCard from '../components/sections/TimeZoneCard.astro'
 import ContactsCard from '../components/sections/ContactsCard.astro'
 import Now from '../components/sections/Now.astro'
 import CVCard from '../components/sections/CVCard.astro'
-// import ExperienceCard from '../components/sections/ExperienceCard.astro'
-// import TattooCard from '../components/sections/TattooCard.astro'
+import ExperienceCard from '../components/sections/ExperienceCard.astro'
 import StudyCard from '../components/sections/StudyCard.astro'
 //
 // import { motion, AnimatePresence } from 'framer-motion'
@@ -17,9 +18,7 @@ import StudyCard from '../components/sections/StudyCard.astro'
 <script>
   import { stagger, spring, timeline, type TimelineDefinition } from 'motion'
   import { loaderAnimation } from '../lib/constants'
-
   const cards = document.querySelectorAll('.card-animate')
-
   const sequence = [
     loaderAnimation,
     [
@@ -57,11 +56,18 @@ import StudyCard from '../components/sections/StudyCard.astro'
       colSpan="md:col-span-1"
       rowSpan="md:row-span-2"
       title="Portfolio & Projects"
+      body="See my portfolio and projects here"
       href="/portfolio"
     />
     <TimeZoneCard />
     <ContactsCard />
-    <!-- <ExperienceCard /> -->
+    <ExperienceCard />
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-1"
+      title="certificates"
+      href="/certificate"
+    />
     <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <div class="flex h-full flex-col justify-between">
         <blockquote class="mt-6 border-l-2 pl-6 italic">
@@ -70,16 +76,7 @@ import StudyCard from '../components/sections/StudyCard.astro'
         <p class="mt-2 text-xs">- Jules Verne</p>
       </div>
     </Card>
-    <!-- <TattooCard /> -->
+
     <StudyCard />
-    <!-- <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <p class="text-xs">
-        © 2023 · Crafted with ♥️ using <a
-          href="https://astro.build/"
-          target="_blank"
-          class="text-red-500">Astro</a
-        > by Gianmarco.
-      </p>
-    </Card> -->
   </main>
 </BaseLayout>

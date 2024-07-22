@@ -74,6 +74,7 @@ const config = {
     },
   },
   plugins: [require('tailwindcss-animate')],
+  autoprefixer: {},
 } satisfies Config
 
 export default config

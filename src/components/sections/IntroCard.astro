@@ -8,45 +8,35 @@ import { Linkedin, Github, Mail } from 'lucide-react'
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
   <div class="flex h-full w-full">
     <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
-      <div class="flex h-full flex-col">
-        <h6 class="m-0 mb-2 text-sm font-light text-gray-500">welcome</h6>
-        <p class="text-alternative m-0 text-xl font-light">
-          introducing my name<b class="font-bold"> Nanda Safiq alfiansyah</b>,
-          An independent Software Engineer who loves to create and share
-          projects about web and mobile technology! I've enjoyed JavaScript ,
-          golang and make it the main language in creating a project.
+      <div class="flex flex-col h-full">
+        <h6 class="text-sm font-light text-gray-400 mb-2">Welcome</h6>
+        <p class="text-l font-light text-alternative">
+          Hello, I'm <b class="font-bold">Nanda Safiq Alfiansyah</b>, an independent Software Engineer from Indonesia. I am passionate about developing and sharing innovative web and mobile solutions. With extensive experience in backend development, I primarily use JavaScript and Golang to build scalable and efficient applications.
         </p>
-        <p class="text-alternative m-0 mt-4 text-xl font-light">
-          I'm currently working as a frelance Backend Developer.
+        <p class="text-l font-light text-alternative mt-4">
+          I am a graduate of Ruangguru's Backend Development program and an alumnus of Bangkit Academy 2023, specializing in Cloud Computing. Currently, I am working as a freelance Backend Developer, where I tackle various projects involving server-side development, API integration, and system optimization. I am committed to delivering high-quality solutions and continuously improving my skills.
         </p>
       </div>
       <div class="flex gap-4">
-        <a href={LINKS.github} aria-label="github profile" target="_blank">
-          <Button aria-label="github profile">
+        <a href={LINKS.github} aria-label="GitHub profile" target="_blank">
+          <Button aria-label="GitHub profile">
             <Github />
             <span class="sr-only">GitHub Profile</span>
           </Button>
         </a>
-        <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">
-          <Button aria-label="linkedin profile">
+        <a href={LINKS.linkedin} aria-label="LinkedIn profile" target="_blank">
+          <Button aria-label="LinkedIn profile">
             <Linkedin />
-            <span class="sr-only">Linkedin Profile</span>
+            <span class="sr-only">LinkedIn Profile</span>
           </Button>
         </a>
-        <a href={LINKS.mail} aria-label="mail profile" target="_blank">
-          <Button>
+        <a href={LINKS.mail} aria-label="Email contact" target="_blank">
+          <Button aria-label="Email contact">
             <Mail />
-            <span class="sr-only">Email contact</span>
+            <span class="sr-only">Email Contact</span>
           </Button>
         </a>
       </div>
     </div>
-    <!-- <img
-      width="300"
-      height="300"
-      src="/me.png"
-      class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
-      alt="memoji of andres plaza"
-    /> -->
   </div>
 </Card>
